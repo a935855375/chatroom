@@ -1,0 +1,14 @@
+2019-08-20 20:30:25,452 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-08-20 20:30:25,592 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-08-20 20:30:25,599 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
+2019-08-20 20:30:26,387 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - db - Starting...
+2019-08-20 20:30:26,415 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-13 - db - Start completed.
+2019-08-20 20:30:26,793 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-08-20 20:30:42,825 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon left the chat room.
+2019-08-20 20:30:43,235 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-08-20 20:30:48,552 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon left the chat room.
