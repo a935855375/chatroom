@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/fan/IdeaProject/chatroom/conf/routes
-// @DATE:Tue Aug 20 18:48:18 CST 2019
+// @DATE:Sat Aug 24 19:59:14 CST 2019
 
 package router
 
@@ -41,7 +41,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """ws""", """controllers.HomeController.socket"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """ws""", """controllers.HomeController.socket(token:String)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signUp""", """controllers.HomeController.signUp"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """notify""", """controllers.HomeController.sendGlobalMessage(title:Option[String], content:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
@@ -93,12 +93,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ws")))
   )
   private[this] lazy val controllers_HomeController_socket2_invoker = createInvoker(
-    HomeController_1.socket,
+    HomeController_1.socket(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
       "socket",
-      Nil,
+      Seq(classOf[String]),
       "GET",
       this.prefix + """ws""",
       """""",
@@ -177,8 +177,8 @@ class Routes(
   
     // @LINE:7
     case controllers_HomeController_socket2_route(params@_) =>
-      call { 
-        controllers_HomeController_socket2_invoker.call(HomeController_1.socket)
+      call(params.fromQuery[String]("token", None)) { (token) =>
+        controllers_HomeController_socket2_invoker.call(HomeController_1.socket(token))
       }
   
     // @LINE:9

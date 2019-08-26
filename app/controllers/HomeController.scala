@@ -5,7 +5,7 @@ import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.stream.Materializer
 import com.google.inject._
 import com.google.inject.name.Named
-import models.Entity.{JWTToken, LoginResponse, UserMessage}
+import models.Entity.{JWTToken, LoginResponse, UserRequest}
 import models.Formats._
 import models.MessageType
 import models.Tables._
@@ -17,23 +17,31 @@ import play.api.libs.json.{JsValue, Json}
 import play.api.libs.streams.ActorFlow
 import play.api.mvc._
 import play.db.NamedDatabase
-import service.AuthService
+import service.{AuthService, UserService}
 import slick.jdbc.JdbcProfile
 import utils.ErrorFactory
 
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents,
-                               factor: ChannelActorFactory.Factory,
-                               @NamedDatabase("server") protected val dbConfigProvider: DatabaseConfigProvider,
-                               errorHandler: ErrorFactory,
-                               authService: AuthService,
-                               assets: Assets,
-                               @Named("controller-actor") controllerActor: ActorRef)
-                              (implicit ec: ExecutionContext,
-                               system: ActorSystem,
-                               mat: Materializer)
+class HomeController @Inject()(
+                                cc: ControllerComponents,
+                                actorFactory: ChannelActorFactory.Factory,
+                                errorHandler: ErrorFactory,
+                                authService: AuthService,
+                                userService: UserService,
+                                assets: Assets,
+                                @NamedDatabase("server")
+                                protected val dbConfigProvider: DatabaseConfigProvider,
+                                @Named("controller-actor")
+                                controllerActor: ActorRef
+                              )
+                              (
+                                implicit
+                                ec: ExecutionContext,
+                                system: ActorSystem,
+                                mat: Materializer
+                              )
   extends AbstractController(cc) with InjectedActorSupport with HasDatabaseConfigProvider[JdbcProfile] {
 
   lazy val logger = Logger(this.getClass)
@@ -46,7 +54,7 @@ class HomeController @Inject()(cc: ControllerComponents,
         db.run(User.filter(x => x.email === input.email && x.password === input.password).result.headOption).map {
           case Some(res) =>
             val timeOut = System.currentTimeMillis() + 3600 * 1000
-            val token = authService.createToken(Json.toJson(JWTToken(input.id, input.email, timeOut)).toString())
+            val token = authService.createToken(Json.toJson(JWTToken(res.id, res.email, timeOut)).toString())
             // 用户登录成功了就直接给用户返回token
             Ok(LoginResponse(timeOut, token, res.id, res.nickname))
           case None =>
@@ -80,17 +88,56 @@ class HomeController @Inject()(cc: ControllerComponents,
     }
   }
 
-  def sendGlobalMessage(title: Option[String], content: String): Action[AnyContent] = Action { _ =>
-    logger.info(s"raised a global message with title : `$title` : $content")
-    val message = UserMessage(MessageType.GLOBAL_MESSAGE, System.currentTimeMillis(), -1, title = title, content = Some(content))
-    controllerActor ! message
-    Ok("send successfully!")
+  def sendGlobalMessage(title: Option[String], content: String): Action[AnyContent] = loginAuth {
+    Action { _ =>
+      logger.info(s"raised a global message with title : `$title` : $content")
+      val message = MessageRow(0, MessageType.GLOBAL_MESSAGE, System.currentTimeMillis(), -1, title = title, content = Some(content))
+      controllerActor ! message
+      Ok("send successfully!")
+    }
   }
 
   // 将请求交给ChannelActor来处理
-  def socket: WebSocket = WebSocket.accept[String, String] { _ =>
-    ActorFlow.actorRef { out =>
-      Props(factor(out))
+  def socket(token: String): WebSocket = WebSocket.acceptOrResult[String, String] { _ =>
+    if (authService.isValidToken(token)) {
+      val uid = Json.parse(authService.decodePayload(token).get).\("uid").as[Int]
+      userService.getUserByUid(uid).map { user =>
+        Right(ActorFlow.actorRef { out =>
+          Props(actorFactory(user, out))
+        })
+      }
+    } else
+      Future.successful(Left(Unauthorized("Invalid credential")))
+  }
+
+
+  def loginAuth[A](action: Action[A]): Action[A] = Action.async(action.parser) { request =>
+    request.headers.get("Authorization") match {
+      case Some(token) =>
+        if (authService.isValidToken(token))
+          action(request)
+        else
+          Future.successful(Unauthorized("Invalid credential"))
+      case None =>
+        Future.successful(Forbidden("Only Authorized requests allowed"))
     }
+  }
+
+
+  def parseUser(implicit ec: ExecutionContext): ActionRefiner[Request, UserRequest] = new ActionRefiner[Request, UserRequest] {
+    override protected def refine[A](request: Request[A]): Future[Either[Result, UserRequest[A]]] = {
+      request.headers.get("Authorization") match {
+        case Some(token) =>
+          if (authService.isValidToken(token)) {
+            val uid = Json.parse(authService.decodePayload(token).get).\("uid").as[Int]
+            userService.getUserByUid(uid).map(user => Right(UserRequest(user, request)))
+          } else
+            Future.successful(Left(Unauthorized("Invalid credential")))
+        case None =>
+          Future.successful(Left(Forbidden("Only Authorized requests allowed")))
+      }
+    }
+
+    override protected def executionContext: ExecutionContext = ec
   }
 }

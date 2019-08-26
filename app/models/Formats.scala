@@ -2,7 +2,7 @@ package models
 
 import akka.util.ByteString
 import julienrf.json.derived
-import models.Entity.{JWTToken, LoginResponse, UserMessage}
+import models.Entity.{JWTToken, LoginResponse}
 import models.Tables._
 import play.api.http.Writeable
 import play.api.libs.json.{Json, OFormat, OWrites}
@@ -21,7 +21,7 @@ object Formats {
 
   implicit lazy val LOGIN_RESPONSE: OFormat[LoginResponse] = derived.oformat()
 
-  implicit lazy val USER_MESSAGE: OFormat[UserMessage] = derived.oformat()
+  implicit lazy val USER_MESSAGE: OFormat[MessageRow] = derived.oformat()
 
   implicit lazy val USER_INPUT_MESSAGE: OFormat[UserInputMessage] = derived.oformat()
 }

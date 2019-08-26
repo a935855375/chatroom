@@ -4,7 +4,7 @@ GET         /              controllers.HomeController.index
 
 POST        /login         controllers.HomeController.login
 
-GET         /ws            controllers.HomeController.socket
+GET         /ws            controllers.HomeController.socket(token: String)
 
 POST        /signUp        controllers.HomeController.signUp
 

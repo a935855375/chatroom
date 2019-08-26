@@ -11,6 +11,8 @@ scalaVersion := "2.13.0"
 
 libraryDependencies += guice
 
+libraryDependencies += caffeine
+
 
 // Json
 libraryDependencies += "org.julienrf" %% "play-json-derived-codecs" % "6.0.0"

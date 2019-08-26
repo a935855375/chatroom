@@ -6,15 +6,21 @@ import play.db.NamedDatabase
 import slick.jdbc.JdbcProfile
 import models.Tables._
 import models.Tables.profile.api._
+import play.api.cache.AsyncCacheApi
 
 import scala.concurrent.Future
 
 @Singleton
-class UserService @Inject()(@NamedDatabase("server") val dbConfigProvider: DatabaseConfigProvider)
+class UserService @Inject()(
+                             @NamedDatabase("server")
+                             val dbConfigProvider: DatabaseConfigProvider,
+                             cache: AsyncCacheApi
+                           )
 
   extends HasDatabaseConfigProvider[JdbcProfile] {
 
-  def getUserByUid(uid: Int): Future[UserRow] = {
+  def getUserByUid(uid: Int): Future[UserRow] = cache.getOrElseUpdate(s"user:$uid") {
     db.run(User.filter(_.id === uid).result.head)
   }
+
 }

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/fan/IdeaProject/chatroom/conf/routes
-// @DATE:Tue Aug 20 18:48:18 CST 2019
+// @DATE:Sat Aug 24 19:59:14 CST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -28,22 +28,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
-    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.socket",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ws"})
-        }
-      """
-    )
-  
     // @LINE:11
     def sendGlobalMessage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.sendGlobalMessage",
       """
         function(title0,content1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "notify" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[Option[String]]].javascriptUnbind + """)("title", title0), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("content", content1)])})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.socket",
+      """
+        function(token0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ws" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("token", token0)])})
         }
       """
     )

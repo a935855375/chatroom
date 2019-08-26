@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/fan/IdeaProject/chatroom/conf/routes
-// @DATE:Tue Aug 20 18:48:18 CST 2019
+// @DATE:Sat Aug 24 19:59:14 CST 2019
 
 package controllers;
 

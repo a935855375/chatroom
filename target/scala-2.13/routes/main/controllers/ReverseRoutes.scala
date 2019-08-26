@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/fan/IdeaProject/chatroom/conf/routes
-// @DATE:Tue Aug 20 18:48:18 CST 2019
+// @DATE:Sat Aug 24 19:59:14 CST 2019
 
 import play.api.mvc.Call
 
@@ -23,16 +23,16 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "signUp")
     }
   
-    // @LINE:7
-    def socket(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "ws")
-    }
-  
     // @LINE:11
     def sendGlobalMessage(title:Option[String], content:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "notify" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Option[String]]].unbind("title", title)), Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("content", content)))))
+    }
+  
+    // @LINE:7
+    def socket(token:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "ws" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("token", token)))))
     }
   
     // @LINE:3
