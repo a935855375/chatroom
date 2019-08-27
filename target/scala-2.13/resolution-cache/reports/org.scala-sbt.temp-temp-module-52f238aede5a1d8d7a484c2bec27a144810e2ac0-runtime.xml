@@ -7,7 +7,7 @@
 		revision="1.2.5"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional"
-		date="20190823140036"/>
+		date="20190826114339"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="compiler-bridge_2.13">
 			<revision name="1.2.5" status="release" pubdate="20190607180825" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sbt/zinc" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
