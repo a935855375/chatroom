@@ -6,4 +6,6 @@ object MessageType {
   val USER_ENTER_MESSAGE = 2
   val GLOBAL_MESSAGE = 3
   val USER_LEAVE_MESSAGE = 4
+  val HISTORY_MESSAGES = 5
+  val PULL_MESSAGES = 6
 }

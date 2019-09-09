@@ -1,12 +1,286 @@
-2019-08-26 11:43:52,090 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
-2019-08-26 11:43:52,244 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-09-09 19:51:01,023 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-09-09 19:51:01,190 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.headers.SecurityHeadersFilter
     play.filters.cors.CORSFilter
     play.filters.gzip.GzipFilter
 
-2019-08-26 11:43:52,250 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev) (no global state)
-2019-08-26 11:44:08,851 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Starting...
-2019-08-26 11:44:08,879 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Start completed.
-2019-08-26 11:44:09,899 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon joined the chat room.
-2019-08-26 12:33:44,293 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon left the chat room.
+2019-09-09 19:51:01,196 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2019-09-09 19:51:06,571 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - db - Starting...
+2019-09-09 19:51:06,599 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 - db - Start completed.
+2019-09-09 19:51:07,385 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon joined the chat room.
+2019-09-09 19:51:57,276 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Shutdown initiated...
+2019-09-09 19:51:57,286 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Shutdown completed.
+2019-09-09 19:51:57,297 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 19:51:57,449 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-09-09 19:51:57,479 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 19:51:57,481 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev) (no global state)
+2019-09-09 19:51:57,823 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-10 - db - Starting...
+2019-09-09 19:51:57,824 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-10 - db - Start completed.
+2019-09-09 19:51:57,875 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-10 - Lemoooon joined the chat room.
+2019-09-09 20:14:00,031 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon left the chat room.
+2019-09-09 20:14:27,155 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 - db - Shutdown initiated...
+2019-09-09 20:14:27,164 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 - db - Shutdown completed.
+2019-09-09 20:14:27,308 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-09-09 20:14:27,347 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 20:14:27,348 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev) (no global state)
+2019-09-09 20:14:27,377 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Starting...
+2019-09-09 20:14:27,377 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Start completed.
+2019-09-09 20:14:27,568 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:14:27,594 [ERROR] from play.core.server.common.WebSocketFlowHandler in play-dev-mode-akka.actor.default-dispatcher-2 - WebSocket flow threw exception
+java.lang.ClassCastException: models.Tables$MessageRow cannot be cast to java.lang.String
+	at akka.stream.impl.fusing.Map$$anon$1.onPush(Ops.scala:54)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:376)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:606)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$SimpleBoundaryEvent.execute(ActorGraphInterpreter.scala:47)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$SimpleBoundaryEvent.execute$(ActorGraphInterpreter.scala:43)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$BatchingActorInputBoundary$OnNext.execute(ActorGraphInterpreter.scala:85)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:581)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:749)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:764)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:671)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:612)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:581)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-09-09 20:14:27,595 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:15:40,697 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:15:42,671 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - db - Shutdown initiated...
+2019-09-09 20:15:42,679 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - db - Shutdown completed.
+2019-09-09 20:15:42,825 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-09-09 20:15:42,853 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 20:15:42,854 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2019-09-09 20:15:42,866 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Starting...
+2019-09-09 20:15:42,866 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Start completed.
+2019-09-09 20:15:42,904 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-09-09 20:16:06,653 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:16:08,204 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:16:10,780 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:16:12,815 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:16:34,442 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon left the chat room.
+2019-09-09 20:16:36,392 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-7 - Lemoooon joined the chat room.
+2019-09-09 20:17:23,319 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:17:25,857 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Shutdown initiated...
+2019-09-09 20:17:25,865 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 - db - Shutdown completed.
+2019-09-09 20:17:26,019 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2019-09-09 20:17:26,048 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 20:17:26,049 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2019-09-09 20:17:26,065 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Starting...
+2019-09-09 20:17:26,066 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Start completed.
+2019-09-09 20:17:26,106 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:17:26,140 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:17:55,222 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-7 - Lemoooon joined the chat room.
+2019-09-09 20:17:55,239 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:18:05,646 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-10 - Lemoooon joined the chat room.
+2019-09-09 20:18:05,732 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-10 - Lemoooon left the chat room.
+2019-09-09 20:18:31,980 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-10 - Lemoooon joined the chat room.
+2019-09-09 20:18:31,990 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-10 - Lemoooon left the chat room.
+2019-09-09 20:19:46,510 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon joined the chat room.
+2019-09-09 20:19:46,523 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:19:55,018 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:20:33,331 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:20:35,344 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:21:30,391 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-16 - Lemoooon left the chat room.
+2019-09-09 20:21:32,329 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:21:53,681 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon left the chat room.
+2019-09-09 20:21:55,704 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:22:01,276 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon left the chat room.
+2019-09-09 20:22:03,192 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-18 - Lemoooon joined the chat room.
+2019-09-09 20:22:16,145 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:22:17,971 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon joined the chat room.
+2019-09-09 20:24:14,427 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon left the chat room.
+2019-09-09 20:24:16,533 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-20 - Lemoooon joined the chat room.
+2019-09-09 20:24:51,275 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon left the chat room.
+2019-09-09 20:24:53,633 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon joined the chat room.
+2019-09-09 20:24:58,169 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-20 - Lemoooon left the chat room.
+2019-09-09 20:24:59,964 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon joined the chat room.
+2019-09-09 20:27:23,057 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon left the chat room.
+2019-09-09 20:27:25,275 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon joined the chat room.
+2019-09-09 20:28:16,075 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon left the chat room.
+2019-09-09 20:28:18,078 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon joined the chat room.
+2019-09-09 20:31:14,429 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon left the chat room.
+2019-09-09 20:31:16,836 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon joined the chat room.
+2019-09-09 20:31:56,490 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon left the chat room.
+2019-09-09 20:31:58,391 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon joined the chat room.
+2019-09-09 20:32:16,553 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-20 - Lemoooon left the chat room.
+2019-09-09 20:32:18,466 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon joined the chat room.
+2019-09-09 20:32:45,297 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon left the chat room.
+2019-09-09 20:32:47,204 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-23 - Lemoooon joined the chat room.
+2019-09-09 20:35:13,928 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon left the chat room.
+2019-09-09 20:35:15,996 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon joined the chat room.
+2019-09-09 20:41:54,697 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon left the chat room.
+2019-09-09 20:41:57,146 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-14 - db - Shutdown initiated...
+2019-09-09 20:41:57,155 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-14 - db - Shutdown completed.
+2019-09-09 20:41:57,276 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-09-09 20:41:57,302 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-18 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 20:41:57,303 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-18 - Application started (Dev) (no global state)
+2019-09-09 20:41:57,317 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - db - Starting...
+2019-09-09 20:41:57,317 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 - db - Start completed.
+2019-09-09 20:41:57,351 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:42:13,529 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-6 - Lemoooon left the chat room.
+2019-09-09 20:42:15,746 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:42:44,351 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-7 - Lemoooon left the chat room.
+2019-09-09 20:42:46,292 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:47:45,371 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:47:47,834 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-7 - db - Shutdown initiated...
+2019-09-09 20:47:47,841 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-7 - db - Shutdown completed.
+2019-09-09 20:47:47,970 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-09-09 20:47:48,000 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.cors.CORSFilter
+    play.filters.gzip.GzipFilter
+
+2019-09-09 20:47:48,001 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2019-09-09 20:47:48,014 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Starting...
+2019-09-09 20:47:48,014 [INFO] from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 - db - Start completed.
+2019-09-09 20:47:48,053 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:47:49,871 [ERROR] from akka.actor.OneForOneStrategy in application-akka.actor.default-dispatcher-4 - None.get
+java.util.NoSuchElementException: None.get
+	at scala.None$.get(Option.scala:632)
+	at scala.None$.get(Option.scala:631)
+	at actors.ChannelActorFactory$$anonfun$receive$1.applyOrElse(ChannelActorFactory.scala:52)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at actors.ChannelActorFactory.aroundReceive(ChannelActorFactory.scala:21)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:612)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:581)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-09-09 20:47:49,871 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:48:18,936 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:48:20,838 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:48:25,584 [ERROR] from akka.actor.OneForOneStrategy in application-akka.actor.default-dispatcher-5 - None.get
+java.util.NoSuchElementException: None.get
+	at scala.None$.get(Option.scala:632)
+	at scala.None$.get(Option.scala:631)
+	at actors.ChannelActorFactory$$anonfun$receive$1.applyOrElse(ChannelActorFactory.scala:52)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at actors.ChannelActorFactory.aroundReceive(ChannelActorFactory.scala:21)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:612)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:581)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-09-09 20:48:25,584 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:49:17,799 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:49:20,008 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-9 - Lemoooon joined the chat room.
+2019-09-09 20:49:26,713 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:49:28,710 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-7 - Lemoooon joined the chat room.
+2019-09-09 20:50:12,439 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon left the chat room.
+2019-09-09 20:50:14,365 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:52:21,260 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-9 - Lemoooon left the chat room.
+2019-09-09 20:52:23,397 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-09-09 20:52:40,168 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon left the chat room.
+2019-09-09 20:52:42,031 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon joined the chat room.
+2019-09-09 20:54:34,549 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-11 - Lemoooon left the chat room.
+2019-09-09 20:54:36,500 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-4 - Lemoooon joined the chat room.
+2019-09-09 20:55:00,211 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon left the chat room.
+2019-09-09 20:55:02,179 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-09-09 20:56:11,408 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 20:56:13,231 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon joined the chat room.
+2019-09-09 20:57:43,455 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:57:45,613 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon joined the chat room.
+2019-09-09 20:58:41,020 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:58:42,964 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon joined the chat room.
+2019-09-09 20:59:05,260 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 20:59:07,157 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon joined the chat room.
+2019-09-09 21:00:12,976 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon left the chat room.
+2019-09-09 21:00:14,890 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-8 - Lemoooon joined the chat room.
+2019-09-09 21:00:18,338 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon left the chat room.
+2019-09-09 21:00:20,095 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon joined the chat room.
+2019-09-09 21:00:42,176 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon left the chat room.
+2019-09-09 21:00:44,023 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon joined the chat room.
+2019-09-09 21:01:18,641 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 21:01:20,573 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon joined the chat room.
+2019-09-09 21:01:35,988 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-11 - Lemoooon left the chat room.
+2019-09-09 21:01:37,856 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon joined the chat room.
+2019-09-09 21:02:40,260 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 21:02:42,181 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon joined the chat room.
+2019-09-09 21:02:55,685 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon left the chat room.
+2019-09-09 21:02:57,605 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-13 - Lemoooon joined the chat room.
+2019-09-09 21:03:58,369 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon left the chat room.
+2019-09-09 21:04:00,611 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon joined the chat room.
+2019-09-09 21:04:33,181 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon left the chat room.
+2019-09-09 21:04:34,998 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-12 - Lemoooon joined the chat room.
+2019-09-09 21:04:51,814 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-3 - Lemoooon left the chat room.
+2019-09-09 21:04:53,654 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-5 - Lemoooon joined the chat room.
+2019-09-09 21:08:01,084 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-11 - Lemoooon left the chat room.
+2019-09-09 21:08:02,478 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-11 - Lemoooon joined the chat room.
+2019-09-09 21:08:11,061 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-15 - Lemoooon left the chat room.
+2019-09-09 21:08:12,235 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon joined the chat room.
+2019-09-09 21:08:17,509 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon left the chat room.
+2019-09-09 21:08:18,765 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-16 - Lemoooon joined the chat room.
+2019-09-09 21:08:45,575 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon left the chat room.
+2019-09-09 21:08:47,051 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-14 - Lemoooon joined the chat room.
+2019-09-09 21:10:16,687 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-2 - Lemoooon left the chat room.
+2019-09-09 21:11:17,119 [WARN] from com.zaxxer.hikari.pool.HikariPool in db housekeeper - db - Thread starvation or clock leap detected (housekeeper delta=58s845ms).
+2019-09-09 21:13:27,045 [WARN] from com.zaxxer.hikari.pool.HikariPool in db housekeeper - db - Thread starvation or clock leap detected (housekeeper delta=1m9s876ms).
+2019-09-09 21:14:58,531 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-18 - Lemoooon joined the chat room.
+2019-09-09 21:17:34,063 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-18 - fanfans joined the chat room.
+2019-09-09 21:18:18,235 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - fanfans left the chat room.
+2019-09-09 21:18:18,235 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon left the chat room.
+2019-09-09 21:18:19,526 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - fanfans joined the chat room.
+2019-09-09 21:18:20,147 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - Lemoooon joined the chat room.
+2019-09-09 21:18:20,996 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - fanfans left the chat room.
+2019-09-09 21:18:21,011 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-19 - Lemoooon left the chat room.
+2019-09-09 21:18:22,249 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-21 - fanfans joined the chat room.
+2019-09-09 21:18:22,550 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-20 - Lemoooon joined the chat room.
+2019-09-09 21:18:27,029 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - Lemoooon left the chat room.
+2019-09-09 21:21:05,586 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-17 - Lemoooon joined the chat room.
+2019-09-09 21:23:05,764 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-20 - Lemoooon left the chat room.
+2019-09-09 21:23:08,405 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-16 - Lemoooon joined the chat room.
+2019-09-09 21:23:26,942 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-26 - Lemoooon left the chat room.
+2019-09-09 21:23:30,172 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-28 - Lemoooon joined the chat room.
+2019-09-09 22:15:04,351 [WARN] from com.zaxxer.hikari.pool.HikariPool in db housekeeper - db - Thread starvation or clock leap detected (housekeeper delta=51m37s227ms).
+2019-09-09 22:18:30,827 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - Lemoooon left the chat room.
+2019-09-09 22:18:30,916 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - fanfans left the chat room.
+2019-09-09 22:18:33,984 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - Lemoooon joined the chat room.
+2019-09-09 22:18:52,405 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-25 - fanfans joined the chat room.
+2019-09-09 22:20:09,864 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-23 - fanfans left the chat room.
+2019-09-09 22:20:36,419 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-30 - Lemoooon left the chat room.
+2019-09-09 22:20:38,185 [INFO] from actors.ChannelActorFactory in application-akka.actor.default-dispatcher-24 - Lemoooon joined the chat room.

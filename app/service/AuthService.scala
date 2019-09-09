@@ -7,7 +7,7 @@ import play.api.Configuration
 @Singleton
 class AuthService @Inject()(config: Configuration) {
   final val JwtSecretKey: String = config.get[String]("jwt.secret.key")
-  final val JwtSecretAlgorithm: String = config.get[String]("jwt.secret.algo")
+  final val JwtSecretAlgorithm: String = config.get[String]("jwt.secret.algorithm")
 
   def createToken(payload: String): String = {
     val header = JwtHeader(JwtSecretAlgorithm)

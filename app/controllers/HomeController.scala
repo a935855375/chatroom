@@ -31,7 +31,7 @@ class HomeController @Inject()(
                                 authService: AuthService,
                                 userService: UserService,
                                 assets: Assets,
-                                @NamedDatabase("server")
+                                @NamedDatabase("default")
                                 protected val dbConfigProvider: DatabaseConfigProvider,
                                 @Named("controller-actor")
                                 controllerActor: ActorRef
@@ -97,7 +97,7 @@ class HomeController @Inject()(
     }
   }
 
-  // 将请求交给ChannelActor来处理
+
   def socket(token: String): WebSocket = WebSocket.acceptOrResult[String, String] { _ =>
     if (authService.isValidToken(token)) {
       val uid = Json.parse(authService.decodePayload(token).get).\("uid").as[Int]

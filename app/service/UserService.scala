@@ -12,14 +12,14 @@ import scala.concurrent.Future
 
 @Singleton
 class UserService @Inject()(
-                             @NamedDatabase("server")
+                             @NamedDatabase("default")
                              val dbConfigProvider: DatabaseConfigProvider,
                              cache: AsyncCacheApi
                            )
 
   extends HasDatabaseConfigProvider[JdbcProfile] {
 
-  def getUserByUid(uid: Int): Future[UserRow] = cache.getOrElseUpdate(s"user:$uid") {
+  def getUserByUid(uid: Int): Future[UserRow] = cache.getOrElseUpdate(s"uid:$uid") {
     db.run(User.filter(_.id === uid).result.head)
   }
 

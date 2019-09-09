@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/fan/IdeaProject/chatroom/conf/routes
-// @DATE:Sat Aug 24 19:59:14 CST 2019
+// @DATE:Mon Sep 09 20:49:15 CST 2019
 
 import play.api.mvc.Call
 

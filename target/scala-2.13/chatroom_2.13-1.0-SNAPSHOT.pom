@@ -53,6 +53,11 @@
             <version>2.7.3</version>
         </dependency>
         <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-caffeine-cache_2.13</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
             <groupId>org.julienrf</groupId>
             <artifactId>play-json-derived-codecs_2.13</artifactId>
             <version>6.0.0</version>

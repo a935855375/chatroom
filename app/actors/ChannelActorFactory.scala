@@ -8,7 +8,7 @@ import models.Formats._
 import models.Tables.{MessageRow, UserRow}
 import models.{EnterMessage, LeaveMessage, MessageType, Tables}
 import play.api.libs.json.Json
-import service.UserService
+import service.{MessageService, UserService}
 
 object ChannelActorFactory {
 
@@ -21,7 +21,8 @@ object ChannelActorFactory {
 class ChannelActorFactory @Inject()(@Assisted user: UserRow,
                                     @Assisted out: ActorRef,
                                     @Named("controller-actor") controllerActor: ActorRef,
-                                    userService: UserService) extends Actor with ActorLogging {
+                                    userService: UserService,
+                                    messageService: MessageService) extends Actor with ActorLogging {
 
   import context.dispatcher
 
@@ -44,6 +45,12 @@ class ChannelActorFactory @Inject()(@Assisted user: UserRow,
           userService.getUserByUid(userMessage.uid) foreach { user =>
             controllerActor ! EnterMessage(out, user)
             log.info(s"${user.nickname} joined the chat room.")
+          }
+
+        case MessageType.PULL_MESSAGES =>
+          // push history message to this one
+          this.messageService.getPullMessage(userMessage.memberCount.get).map { messages =>
+            out ! Json.toJson(MessageRow(0, MessageType.PULL_MESSAGES, System.currentTimeMillis(), this.user.id, content = Some(Json.toJson(messages).toString()))).toString()
           }
       }
 
